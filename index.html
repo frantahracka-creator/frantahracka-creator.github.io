@@ -3,192 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPL(A) Trenažér</title>
+    <title>PPL(A) Trenažér - Všechny předměty</title>
     <style>
-        :root {
-            --primary: #2196f3;
-            --success: #4caf50;
-            --danger: #f44336;
-            --bg: #f8f9fa;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-        .container {
-            background: white;
-            max-width: 650px;
-            width: 100%;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        h1 { text-align: center; color: #1a237e; margin-bottom: 30px; }
+        :root { --primary: #2196f3; --success: #4caf50; --danger: #f44336; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); display: flex; justify-content: center; padding: 20px; margin: 0; }
+        .container { background: white; max-width: 650px; width: 100%; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
         
-        /* Menu výběru témat */
-        .menu { display: grid; gap: 15px; }
-        .menu-btn {
-            padding: 20px;
-            font-size: 1.1em;
-            font-weight: bold;
-            border: none;
-            border-radius: 10px;
-            background: white;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            cursor: pointer;
-            transition: all 0.2s;
+        h1 { text-align: center; color: #1a237e; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+
+        /* Mřížka menu */
+        .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+        @media (max-width: 500px) { .menu { grid-template-columns: 1fr; } }
+        
+        .menu-btn { 
+            padding: 15px 10px; 
+            border: 2px solid var(--primary); 
+            background: white; 
+            color: var(--primary); 
+            cursor: pointer; 
+            font-weight: bold; 
+            border-radius: 8px; 
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.9em;
         }
         .menu-btn:hover { background: var(--primary); color: white; transform: translateY(-2px); }
-
-        /* Kvízové rozhraní */
-        .hidden { display: none; }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
-            margin-bottom: 20px;
-        }
-        .question-text { font-size: 1.2em; line-height: 1.4; margin-bottom: 25px; color: #333; }
-        .answer-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: 2px solid #eee;
-            border-radius: 8px;
-            background: white;
-            text-align: left;
-            font-size: 1em;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .answer-btn:hover:not(:disabled) { border-color: var(--primary); background: #f0f7ff; }
         
-        /* Stavy odpovědí */
+        /* Kvízové prvky */
+        .progress-container { width: 100%; height: 8px; background: #eee; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+        #progress-bar { height: 100%; width: 0%; background: var(--primary); transition: width 0.3s; }
+        .header { display: flex; justify-content: space-between; font-size: 0.9em; color: #666; margin-bottom: 10px; }
+        .hidden { display: none; }
+        .q-text { font-weight: bold; font-size: 1.1em; margin-bottom: 20px; color: #1a237e; min-height: 50px; line-height: 1.4; }
+        .ans-btn { display: block; width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; text-align: left; cursor: pointer; background: white; font-size: 1em; transition: 0.2s; }
+        .ans-btn:hover:not(:disabled) { border-color: var(--primary); background: #f0f7ff; }
         .correct { background: #e8f5e9 !important; border-color: var(--success) !important; color: #2e7d32; font-weight: bold; }
         .wrong { background: #ffebee !important; border-color: var(--danger) !important; color: #c62828; }
-
-        .footer { margin-top: 30px; display: flex; justify-content: space-between; }
-        .btn { padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-        .btn-blue { background: var(--primary); color: white; }
+        
+        /* Výsledky */
+        .results-card { text-align: center; padding: 10px; }
+        .results-score { font-size: 3.5em; font-weight: bold; margin: 10px 0; }
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 25px 0; }
+        .stat-item { padding: 12px; background: #f0f2f5; border-radius: 8px; }
+        .stat-label { font-size: 0.75em; color: #666; text-transform: uppercase; margin-bottom: 5px; }
+        .stat-val { font-weight: bold; font-size: 1.3em; }
+        .controls { margin-top: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .btn-next { padding: 12px 25px; background: var(--primary); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(33, 150, 243, 0.3); }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div id="home-screen">
-        <h1>PPL(A) Testy</h1>
+        <h1>PPL(A) Trenažér</h1>
+        <p class="subtitle">Vyberte předmět k procvičování</p>
         <div class="menu">
-            <button class="menu-btn" onclick="startQuiz('Letecky_predpisy.json')">1 Právní předpisy v oblasti letectví</button>
-            <button class="menu-btn" onclick="startQuiz('Lidska_vykonnost.json')">Lidská výkonnost (Ještě nedostupné)</button>
-            <button class="menu-btn" onclick="startQuiz('Meteorologie.json')">Meteorologie (Ještě nedostupné)</button>
-            </div>
+            <button class="menu-btn" onclick="startQuiz('Letecke_predpisy.json')">Letecké předpisy</button>
+            <button class="menu-btn" onclick="startQuiz('Lidska_vykonnost.json')">Lidská výkonnost &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Meteorologie.json')">Meteorologie &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Komunikace.json')">Komunikace &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Letove_zasady.json')">Letové zásady &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Provozni_postupy.json')">Provozní postupy &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Plan_provedeni.json')">Plánování letu &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Obecne_znalosti.json')">Znalosti o letadle &#40;Ještě nedostupné&#41;</button>
+            <button class="menu-btn" onclick="startQuiz('Navigace.json')">Navigace &#40;Ještě nedostupné&#41;</button>
+        </div>
     </div>
 
     <div id="quiz-screen" class="hidden">
+        <div class="progress-container"><div id="progress-bar"></div></div>
         <div class="header">
-            <span id="progress-text">Otázka 1/X</span>
-            <span id="score-text">Úspěšnost: 0%</span>
+            <span id="q-counter">Otázka 1/X</span>
+            <span id="live-score">Úspěšnost: 0%</span>
         </div>
-        <div id="question-box" class="question-text">Načítám otázku...</div>
-        <div id="answers-box"></div>
-        <div class="footer">
-            <button class="btn" onclick="exitQuiz()">Ukončit</button>
-            <button id="next-btn" class="btn btn-blue hidden" onclick="nextQuestion()">Další otázka ➡</button>
+        <div id="qText" class="q-text"></div>
+        <div id="ansBox"></div>
+        <div class="controls">
+            <button onclick="location.reload()" style="background:none; border:none; color:#999; cursor:pointer; font-weight:bold;">✖ UKONČIT</button>
+            <button id="nextBtn" class="btn-next hidden" onclick="nextQuestion()">DALŠÍ ➡</button>
+        </div>
+    </div>
+
+    <div id="results-screen" class="hidden">
+        <div class="results-card">
+            <h2>Výsledek testu</h2>
+            <div id="final-percent" class="results-score">0%</div>
+            <div id="result-text" style="font-weight: bold; margin-bottom: 20px; font-size: 1.2em;"></div>
+            
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Otázek</div>
+                    <div id="stat-total" class="stat-val">0</div>
+                </div>
+                <div class="stat-item" style="color: var(--success)">
+                    <div class="stat-label">Správně</div>
+                    <div id="stat-correct" class="stat-val">0</div>
+                </div>
+                <div class="stat-item" style="color: var(--danger)">
+                    <div class="stat-label">Špatně</div>
+                    <div id="stat-wrong" class="stat-val">0</div>
+                </div>
+            </div>
+            
+            <button class="menu-btn" style="width: 100%; background: var(--primary); color: white;" onclick="location.reload()">ZPĚT DO MENU</button>
         </div>
     </div>
 </div>
 
 <script>
     let questions = [];
-    let currentIdx = 0;
-    let correctCount = 0;
+    let curIdx = 0;
+    let correctAnswers = 0;
+    let wrongAnswers = 0;
     let isAnswered = false;
 
-    // Funkce pro spuštění testu
     function startQuiz(fileName) {
-        fetch(fileName)
+        fetch('./' + fileName)
             .then(res => {
-                if (!res.ok) throw new Error("Soubor nenalezen. Ujisti se, že máš " + fileName + " ve stejné složce.");
+                if (!res.ok) throw new Error(`Soubor ${fileName} nebyl nalezen. Ujistěte se, že je nahraný ve stejné složce.`);
                 return res.json();
             })
             .then(data => {
-                // Zamíchat otázky pro každé spuštění
                 questions = data.sort(() => Math.random() - 0.5);
-                currentIdx = 0;
-                correctCount = 0;
-                
+                curIdx = 0;
+                correctAnswers = 0;
+                wrongAnswers = 0;
                 document.getElementById('home-screen').classList.add('hidden');
+                document.getElementById('results-screen').classList.add('hidden');
                 document.getElementById('quiz-screen').classList.remove('hidden');
                 showQuestion();
             })
-            .catch(err => alert(err.message));
+            .catch(err => {
+                alert("Chyba při načítání testu: " + err.message);
+            });
     }
 
     function showQuestion() {
         isAnswered = false;
-        const q = questions[currentIdx];
+        const q = questions[curIdx];
         
-        document.getElementById('next-btn').classList.add('hidden');
-        document.getElementById('progress-text').innerText = `Otázka ${currentIdx + 1}/${questions.length}`;
-        document.getElementById('question-box').innerText = q.question;
+        document.getElementById('q-counter').innerText = `Otázka ${curIdx + 1}/${questions.length}`;
+        document.getElementById('qText').innerText = q.question;
+        document.getElementById('nextBtn').classList.add('hidden');
         
-        const ansBox = document.getElementById('answers-box');
-        ansBox.innerHTML = '';
+        const progress = (curIdx / questions.length) * 100;
+        document.getElementById('progress-bar').style.width = `${progress}%`;
+
+        const box = document.getElementById('ansBox');
+        box.innerHTML = '';
         
         q.answers.forEach((text, i) => {
-            const btn = document.createElement('button');
-            btn.className = 'answer-btn';
-            btn.innerText = text;
-            btn.onclick = () => checkAnswer(i, q.correct, btn);
-            ansBox.appendChild(btn);
+            const b = document.createElement('button');
+            b.className = 'ans-btn';
+            b.innerText = text;
+            b.onclick = () => checkAnswer(i, q.correct, b);
+            box.appendChild(b);
         });
     }
 
-    function checkAnswer(chosenIdx, correctIdx, clickedBtn) {
+    function checkAnswer(idx, correctIdx, btn) {
         if (isAnswered) return;
         isAnswered = true;
         
-        const allButtons = document.querySelectorAll('.answer-btn');
-        allButtons.forEach(b => b.disabled = true); // Zablokovat ostatní tlačítka
+        const buttons = document.querySelectorAll('.ans-btn');
+        buttons.forEach(b => b.disabled = true);
 
-        if (chosenIdx === correctIdx) {
-            clickedBtn.classList.add('correct');
-            correctCount++;
+        if (idx === correctIdx) {
+            btn.classList.add('correct');
+            correctAnswers++;
         } else {
-            clickedBtn.classList.add('wrong');
-            allButtons[correctIdx].classList.add('correct'); // Ukázat správnou
+            btn.classList.add('wrong');
+            if (buttons[correctIdx]) buttons[correctIdx].classList.add('correct');
+            wrongAnswers++;
         }
         
-        const percent = Math.round((correctCount / (currentIdx + 1)) * 100);
-        document.getElementById('score-text').innerText = `Úspěšnost: ${percent}%`;
-        document.getElementById('next-btn').classList.remove('hidden');
+        const percent = Math.round((correctAnswers / (curIdx + 1)) * 100);
+        document.getElementById('live-score').innerText = `Úspěšnost: ${percent}%`;
+        document.getElementById('nextBtn').classList.remove('hidden');
     }
 
     function nextQuestion() {
-        currentIdx++;
-        if (currentIdx < questions.length) {
+        curIdx++;
+        if (curIdx < questions.length) {
             showQuestion();
         } else {
-            alert(`Konec testu! Dosáhl jsi ${correctCount} správných odpovědí z ${questions.length}.`);
-            exitQuiz();
+            showFinalResults();
         }
     }
 
-    function exitQuiz() {
+    function showFinalResults() {
         document.getElementById('quiz-screen').classList.add('hidden');
-        document.getElementById('home-screen').classList.remove('hidden');
+        document.getElementById('results-screen').classList.remove('hidden');
+        
+        const percent = Math.round((correctAnswers / questions.length) * 100);
+        document.getElementById('final-percent').innerText = `${percent}%`;
+        document.getElementById('stat-total').innerText = questions.length;
+        document.getElementById('stat-correct').innerText = correctAnswers;
+        document.getElementById('stat-wrong').innerText = wrongAnswers;
+        
+        if (percent >= 75) {
+            document.getElementById('result-text').innerText = "PROSPĚL(A) JSTE ";
+            document.getElementById('result-text').style.color = "var(--success)";
+            document.getElementById('final-percent').style.color = "var(--success)";
+        } else {
+            document.getElementById('result-text').innerText = "NEPROSPĚL(A) JSTE";
+            document.getElementById('result-text').style.color = "var(--danger)";
+            document.getElementById('final-percent').style.color = "var(--danger)";
+        }
     }
 </script>
 
 </body>
 </html>
-
-
