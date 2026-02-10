@@ -8,7 +8,7 @@
       "lidskou chybou",
       "meteorologickými vlivy"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
       "postupu pro nouzové přistání",
       "optimálního řešení problému"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
       "78 %",
       "18.9 %"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
       "1 %",
       "0.1 %"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
       "18000 ft",
       "22000 ft"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
       "78 %",
       "1 %"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
       "nezdravou výživou",
       "nedostatkem spánku"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
       "porucha barvocitu při východu a západu slunce",
       "nemoc z dekomprese způsobená ukvapeností"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
       "palivem nebo hydraulickou kapalinou",
       "trhlinami v tepelném výměníku"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
       "cyanóza",
       "poruchy vědomí"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
       "modřiny na celém těle",
       "bolest kolen a spodní části nohou"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
       "zrak",
       "čich"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
       "10000 ft",
       "12000 ft"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
       "12000 ft",
       "22000 ft"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
       "srážlivost krve",
       "regulace cukru v krvi"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
       "krevní destičky",
       "cévní kapiláry"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
       "srážlivost krve",
       "regulace cukru v krvi"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
       "srážlivost krve",
       "regulace cukru v krvi"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 19,
@@ -206,7 +206,7 @@
       "menstruace",
       "potápění"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 20,
@@ -217,7 +217,7 @@
       "alkoholem",
       "nízkým tlakem"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 21,
@@ -228,7 +228,7 @@
       "nastavit teplotu kabiny a vyhnout se velkým náklonům",
       "poskytnout kyslík a vyhnout se nízkým násobkům"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 22,
@@ -239,7 +239,7 @@
       "virulence",
       "koherence"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 23,
@@ -250,7 +250,7 @@
       "automatický nervový systém",
       "plnící nervový systém"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 24,
@@ -261,7 +261,7 @@
       "nevnímání rychlosti při pojíždění",
       "dlouhozrakost způsobená stářím, zvláště v noci"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 25,
@@ -272,7 +272,7 @@
       "nerozbitné",
       "bez UV filtru"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 26,
@@ -283,7 +283,7 @@
       "čočka",
       "slepá skvrna"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 27,
@@ -294,7 +294,7 @@
       "kochlea",
       "vnitřní ucho"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 28,
@@ -305,7 +305,7 @@
       "během mírného a pomalého stoupání",
       "všechna okna jsou zcela uzavřena"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 29,
@@ -316,7 +316,7 @@
       "zatáčení do opačného směru",
       "zahájení stoupání"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 30,
@@ -327,7 +327,7 @@
       "pohyby hlavou při zatáčení",
       "turbulence v horizontálním letu"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 31,
@@ -338,7 +338,7 @@
       "náklonu",
       "letu na zádech"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 32,
@@ -349,7 +349,7 @@
       "náklonu",
       "letu na zádech"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 33,
@@ -360,7 +360,7 @@
       "pilot má pocit, že přiblížení je příliš vysoké, a proto se k dráze přibližuje níže než pod správným úhlem sestupu",
       "pilot má pocit, že přiblížení je příliš pomalé, a proto se k dráze přibližuje vyšší než normální přibližovací rychlostí"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 34,
@@ -371,7 +371,7 @@
       "pilot přistane vedle středové čáry",
       "tvrdé přistání"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 35,
@@ -382,7 +382,7 @@
       "v přímém horizontálním letu",
       "v zatáčce"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 36,
@@ -393,7 +393,7 @@
       "únavou",
       "kouřením"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 37,
@@ -404,7 +404,7 @@
       "rychlými pohyby očí",
       "špatným výkladem mozku"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 38,
@@ -415,7 +415,7 @@
       "0,003",
       "0,0001"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 39,
@@ -426,7 +426,7 @@
       "kouření",
       "nadváha"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 40,
@@ -437,7 +437,7 @@
       "sportování",
       "přístrojové potápění před letem"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 41,
@@ -448,7 +448,7 @@
       "může uchovat 3 (±1) položek na 5 až 10 sekund",
       "může uchovat 7 (±2) položek na 10 až 20 sekund"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 42,
@@ -459,7 +459,7 @@
       "10 až 20 sekund",
       "35 až 50 sekund"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 43,
@@ -470,7 +470,7 @@
       "chyba, která má okamžitý dopad na řízení letadla",
       "chyba, která po dlouhou dobu zůstane v systému neobjevena"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 44,
@@ -481,7 +481,7 @@
       "smyčka zpětné vazby při uzavřené komunikaci",
       "kritická kontrola dvojsmyslné situace za letu"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 45,
@@ -492,7 +492,7 @@
       "situační přemýšlení",
       "postup předběžné kontroly"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 46,
@@ -503,7 +503,7 @@
       "použitím správné náhlavní soupravy",
       "použitím radiostanic certifikovaných pro letectví"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 47,
@@ -514,7 +514,7 @@
       "ignorovat, přijmout, převést, vyloučit",
       "vyloučit, vyhnout se, zmírnit, převést"
     ],
-    "correct": null
+    "correct": 0
   },
   {
     "id": 48,
@@ -525,7 +525,7 @@
       "při zkušebních letech kvůli vyšší hladině nervozity",
       "při plánování letu, je-li předpovídáno výborné počasí"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 49,
@@ -536,7 +536,7 @@
       "provedení skluzu na krátkém finále",
       "tendence přijímat vyšší riziko ve skupině"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 50,
@@ -547,7 +547,7 @@
       "impulzivita a bezstarostnost",
       "předvádění se a nezranitelnost"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 51,
@@ -558,7 +558,7 @@
       "rychlá odevzdanost se ve složitých a kritických situacích",
       "důkladné vyhodnocení rizik v předem neznámých situacích"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 52,
@@ -569,7 +569,7 @@
       "pochybnosti, když se něco zdá nejasné nebo dvojsmyslné",
       "sklon vidět to, co lze předpokládat"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 53,
@@ -580,7 +580,7 @@
       "extrovertní – stabilní",
       "extrovertní – nestabilní"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 54,
@@ -591,7 +591,7 @@
       "lepší možnosti výcviku pro mladé piloty",
       "vysoké poruchovosti technických systémů"
     ],
-    "correct": null
+    "correct": 1
   },
   {
     "id": 55,
@@ -602,7 +602,7 @@
       "bod C",
       "bod D"
     ],
-    "correct": null
+    "correct": 2
   },
   {
     "id": 56,
@@ -613,7 +613,7 @@
       "bod C",
       "bod D"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 57,
@@ -624,7 +624,7 @@
       "2, 4",
       "1, 2, 3, 4"
     ],
-    "correct": null
+    "correct": 3
   },
   {
     "id": 58,
@@ -635,6 +635,6 @@
       "stres může nastat, i když se zdá, že daný problém nemá řešení",
       "výcvik a zkušenosti nemají žádný vliv na výskyt stresu"
     ],
-    "correct": null
+    "correct": 2
   }
 ]
