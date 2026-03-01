@@ -669,7 +669,7 @@
       "kumulonimbus"
     ],
     "correct": null,
-    "image": "MET-001.png"
+    "image": "MET-001.jpg"
   },
   {
     "id": 57,
@@ -681,7 +681,7 @@
       "altus"
     ],
     "correct": null,
-    "image": "MET-002.png"
+    "image": "MET-002.jpg"
   },
   {
     "id": 58,
@@ -693,7 +693,7 @@
       "altokumulus"
     ],
     "correct": null,
-    "image": "MET-004.png"
+    "image": "MET-004.jpg"
   },
   {
     "id": 59,
@@ -837,7 +837,7 @@
       "studená fronta"
     ],
     "correct": null,
-    "image": "MET-005.png"
+    "image": "MET-005.jpg"
   },
   {
     "id": 71,
@@ -849,7 +849,7 @@
       "studená fronta"
     ],
     "correct": null,
-    "image": "MET-005.png"
+    "image": "MET-005.jpg"
   },
   {
     "id": 72,
@@ -861,7 +861,7 @@
       "studená fronta"
     ],
     "correct": null,
-    "image": "MET-005.png"
+    "image": "MET-005.jpg"
   },
   {
     "id": 73,
@@ -1547,4 +1547,5 @@
     "correct": null,
     "image": null
   }
+
 ]
